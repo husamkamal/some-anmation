@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--main-color);
+}
+:root {
+  --main-color: #f0f0f0;
+  --main-font-color: black;
+}
+.darke {
+  --main-color: black;
+  --main-font-color: white;
+}
+.cont {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.header {
+  height: 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.header > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 6rem;
+}
+.header > div>button {
+    color: var(--main-font-color);
+
+}
+.header > div > img {
+  width: 6rem;
+}
+.header > div > button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+.main {
+  color: var(--main-font-color);
+  height: 29rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.gif > .trans {
+  transform: translate(90px, 100px);
+  transition: all 5s;
+  animation-name: hus;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+.footer > img {
+  position: relative;
+  right: 10rem;
+  top: 2rem;
+}
+.footer > div {
+  background-color: green;
+  width: 35rem;
+  height: 10rem;
+  border-radius: 100px 100px 0px 0px;
+  /* border:5px solid white; */
+  transition: all 1s;
+  animation-name: huss;
+  animation-duration: 10s;
+  animation-delay: 3s;
+  animation-iteration-count: infinite;
+}
+@keyframes hus {
+  0% {
+    transform: translate(-100px, 100px);
+  }
+  50% {
+    transform: translate(-200px, -100px) scale(2, 2);
+  }
+  100% {
+    transform: translate(200px, -100px) scale(2, 2);
+  }
+  0% {
+    transform: translate(200px, 100px);
+  }
+}
+@keyframes huss {
+  0% {
+    border-radius: 100px 100px 0px 0px;
+  }
+  50% {
+    border-radius: 300px 50px 0px 0px;
+  }
+  100% {
+    border-radius: 50px 300px 0px 0px;
+  }
+  20% {
+    border-radius: 100px 100px 0px 0px;
+  }
+}
